@@ -1,0 +1,14 @@
+@import "tailwindcss";
+@theme { --color-pulse: #ff2d2d; --font-display: "Anton", Impact, sans-serif; --font-sans: "Inter", system-ui, sans-serif; }
+html { background: #000; }
+body { background: #000; color: #fff; font-family: var(--font-sans); overflow-x: hidden; -webkit-font-smoothing: antialiased; }
+.glass { background: rgb(255 255 255 / .05); backdrop-filter: blur(18px); border: 1px solid rgb(255 255 255 / .1); box-shadow: 0 20px 50px -20px rgb(0 0 0 / .8); }
+.btn { display: inline-flex; align-items: center; gap: .5rem; border-radius: 9999px; padding: .8rem 1.6rem; font-weight: 600; font-size: .9rem; transition: transform .2s, box-shadow .3s; }
+.btn:active { transform: scale(.96); }
+.btn-red { background: linear-gradient(120deg, #ff2d2d, #b80000); box-shadow: 0 10px 40px -10px #ff2d2d; }
+.btn-red:hover { box-shadow: 0 14px 50px -6px #ff2d2d; }
+.btn-ghost { composes: glass; background: rgb(255 255 255 / .06); border: 1px solid rgb(255 255 255 / .15); }
+.display { font-family: var(--font-display); text-transform: uppercase; letter-spacing: .01em; line-height: .95; }
+:focus-visible { outline: 2px solid #ff2d2d; outline-offset: 3px; }
+@media (pointer: fine) { body.cur, body.cur a, body.cur button { cursor: none; } }
+@media (prefers-reduced-motion: reduce) { * { animation: none !important; transition: none !important; } }

@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://ironpulsefitness.in/sitemap.xml
